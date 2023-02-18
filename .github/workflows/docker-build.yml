@@ -28,6 +28,7 @@ jobs:
       - name: push
         uses: docker/build-push-action@v4
         with:
-          platforms: linux/amd64,linux/arm/v7,linux/arm64,linux/arm64/v8
+          platforms: linux/amd64,linux/arm64,linux/arm64/v8
+          # no armv7 - https://users.rust-lang.org/t/rust-docker-image-broken-on-architecture-linux-arm-v7/54868/4
           push: true
           tags: ${{ steps.meta.outputs.tags }}
