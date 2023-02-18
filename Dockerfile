@@ -11,6 +11,5 @@ ADD https://github.com/krallin/tini/releases/download/v0.19.0/tini-static /tini
 RUN chmod +x /tini
 
 FROM scratch
-COPY --from=builder /wireguard-vanity-address/target/x86_64-unknown-linux-musl/release/wireguard-vanity-address /wireguard-vanity-address
-COPY --from=builder /tini /tini
+COPY --from=builder /wireguard-vanity-address/target/x86_64-unknown-linux-musl/release/wireguard-vanity-address /tini /
 ENTRYPOINT ["/tini","--","/wireguard-vanity-address"]

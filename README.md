@@ -7,5 +7,7 @@ it took longer to install cargo than it did to find a key
 
 ## usage
 ```
-docker run ghcr.io/mchangrh/wg-vanity:latest dave --in 10
+docker run -it ghcr.io/mchangrh/wg-vanity dave --in 10
+
+docker run -it mchangrh/wg-vanity dave --in 10
 ```
