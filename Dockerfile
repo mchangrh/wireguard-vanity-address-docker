@@ -1,4 +1,5 @@
 FROM rust:latest as builder
+ARG RUST_TARGET
 RUN echo ${RUST_TARGET}
 # clone 12-count-scalars branch
 RUN git clone https://github.com/warner/wireguard-vanity-address.git -b 12-count-scalars --depth 1
