@@ -42,4 +42,4 @@ jobs:
         with:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          build-args: TARGET=${{ matrix.target }}
+          build-args: RUST_TARGET=${{ matrix.target }}
