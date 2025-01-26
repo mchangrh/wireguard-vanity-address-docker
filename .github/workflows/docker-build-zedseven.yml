@@ -14,8 +14,8 @@ jobs:
           images: |
             ghcr.io/${{ github.repository_owner }}/wg-vanity
             mchangrh/wg-vanity
-          flavor: |
-            latest=true
+          tags: |
+            type=raw,value=zedseven
       - name: Login to DockerHub
         uses: docker/login-action@v3
         with:
@@ -30,5 +30,4 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           push: true
-          file: Dockerfile.zedseven
           tags: ${{ steps.meta.outputs.tags }}

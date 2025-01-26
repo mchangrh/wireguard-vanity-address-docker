@@ -1,6 +1,6 @@
 FROM rust:latest AS builder
-# clone 12-count-scalars branch
-RUN git clone https://github.com/warner/wireguard-vanity-address.git -b 12-count-scalars --depth 1
+# clone zedseven fork
+RUN git clone https://github.com/zedseven/wireguard-vanity-address.git --depth 1
 # target statically compiled build with unknown linux
 RUN rustup target add x86_64-unknown-linux-musl
 WORKDIR /wireguard-vanity-address
